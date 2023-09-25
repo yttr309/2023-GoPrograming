@@ -18,11 +18,12 @@ func main() {
 		log.Fatal(err)
 	}
 	inputScore = strings.TrimSpace(inputScore)
-	score, err := strconv.ParseInt(inputScore, 32)
-	if score >= 60 {
-		grade := "A grade"
+	score, err := strconv.ParseFloat(inputScore, 64)
+	var grade string
+	if score >= 90.0 {
+		grade = "A grade"
 	} else {
-		grade := "under A grade"
+		grade = "under A grade"
 	}
 	fmt.Println(inputScore)
 	fmt.Println("You will get ", grade)

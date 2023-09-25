@@ -10,7 +10,7 @@ func main() {
 
 	fmt.Print("Input score : ")
 	reader := bufio.NewReader(os.Stdin)
-	inputScore := reader.ReadString("\n")
+	inputScore, err := reader.ReadString('\n')
 	fmt.Println(inputScore)
 
 	//broken := "cs r?cks~"

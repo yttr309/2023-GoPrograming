@@ -12,7 +12,9 @@ func main() {
 	fmt.Print("Input score : ")
 	reader := bufio.NewReader(os.Stdin)
 	inputScore, err := reader.ReadString('\n')
-	log.Fatal(err)
+	if err != nil {
+		log.Fatal(err)
+	}
 	fmt.Println(inputScore)
 
 	//broken := "cs r?cks~"

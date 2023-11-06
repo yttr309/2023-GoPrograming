@@ -29,6 +29,7 @@ func main() {
 		}
 		inputNumberString = strings.TrimSpace(inputNumberString)
 		inputNumber, err := strconv.Atoi(inputNumberString)
+
 		if err != nil {
 			log.Fatal(err)
 		}
